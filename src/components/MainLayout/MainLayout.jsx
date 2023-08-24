@@ -12,7 +12,8 @@ const SSidebar = css`
 `;
 
 const SContentContainer = css`
-    flex-grow: 1; // flex-grow를 주면 남은공간을 모두 이친구의 공간으로 채운다.
+    flex-grow: 1; 
+    // flex-grow를 주면 남은공간을 모두 이친구의 공간으로 채운다.
     height: 700px;
     background-color: #aaa;
 `;

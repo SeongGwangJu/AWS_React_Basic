@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import UseMemoContainer from '../../components/UseMemoContainer/UseMemoContainer';
-import MainLayout from '../../components/MainLayout/MainLayout';
 
 
 function CPage(props) {

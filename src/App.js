@@ -9,6 +9,7 @@ import APage from "./pages/APage/APage";
 import BPage from "./pages/BPage/BPage";
 import { useState } from "react";
 import CPage from "./pages/CPage/CPage";
+import Principal from "./components/Principal/Principal";
 
 const SHeader = css`
   display: flex;
@@ -35,21 +36,23 @@ function App() {
       <Reset />
       <Global styles={GSCommon} />
       <div>
-        <div css={SHeader}> 
-          { header } 
+        <div css={SHeader}>
+          { header }
             <div>
               <Link to={ "/a" }>A페이지</Link>
               <Link to={ "/b" }>B페이지</Link>
               <Link to={ "/c" }>C페이지</Link>
+              <Link to={ "/principal" }>Principal</Link>
             </div>
           </div>
-        
+
         <div css={SContainer}>
           <Routes>
             <Route path="/a" element={<APage />} />
             {/* 다른위치에서 매개변수로 setHeader를 받으려면 정확하게 넘겨줘야함 */}
             <Route path="/b" element={<BPage setHeader={setHeader} />} />
             <Route path="/c" element={<CPage />} />
+            <Route path="/principal" element={<Principal />} />
           </Routes>
         </div>
       </div>
