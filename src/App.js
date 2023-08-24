@@ -8,6 +8,7 @@ import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import APage from "./pages/APage/APage";
 import BPage from "./pages/BPage/BPage";
 import { useState } from "react";
+import CPage from "./pages/CPage/CPage";
 
 const SHeader = css`
   display: flex;
@@ -39,6 +40,7 @@ function App() {
             <div>
               <Link to={ "/a" }>A페이지</Link>
               <Link to={ "/b" }>B페이지</Link>
+              <Link to={ "/c" }>C페이지</Link>
             </div>
           </div>
         
@@ -47,6 +49,7 @@ function App() {
             <Route path="/a" element={<APage />} />
             {/* 다른위치에서 매개변수로 setHeader를 받으려면 정확하게 넘겨줘야함 */}
             <Route path="/b" element={<BPage setHeader={setHeader} />} />
+            <Route path="/c" element={<CPage />} />
           </Routes>
         </div>
       </div>
